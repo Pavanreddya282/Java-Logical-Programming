@@ -1,27 +1,21 @@
-import java.util.Scanner;
+package com.JavaPractice;
 
-class MaxThreeNumbers{
-  public static void main(String args[]) {
-    int a, b, c;
-    Scanner sc = new Scanner(System.in);
+public class MaxThreeNumbers {
+	
+	public static void main(String a[]) {
+		int num1=43;
+		int num2=46;
+		int num3=50;
+		
+		if(num1>num2 && num1>num3) {
+			System.out.println(num1+" is Maximum");
+			
+		}
+		else if(num2>num3) {
+			System.out.println(num2+" is Maximum");
+		}
+		else
+			System.out.println(num3+" is Maximum");
+	}
 
-    System.out.println("Enter the value of a :");
-    a = sc.nextInt();
-    System.out.println("Enter the value of b :");
-    b = sc.nextInt();
-    System.out.println("Enter the value of c :");
-    c = sc.nextInt();
-    
-    if (a>b)
-      if (b>c)
-    {
-      System.out.println("A is Big");
-    }
-    if (b>a)
-      if (a>c)
-    {
-      System.out.println("B is Big");
-    }
-      System.out.println("C is Big");
-    }
-  }
+}

@@ -2,9 +2,10 @@ package com.JavaPractice;
 
 import java.util.Scanner;
 
-public class PrimeCheck {
+public class PrimeCountToN {
 	
 	public static void main(String[] args) {
+		
 		Scanner input =new Scanner(System.in);
 		
 		System.out.println("Enter the Number");
@@ -13,18 +14,19 @@ public class PrimeCheck {
 		input.close();
 		int count=0;
 		
-		for(int i=1;i<=num;i++) {
-			if(num%i==0)
+		for(int i=2;i<=num;i++) {
+			boolean prime=true;
+			
+			for(int j=2;j<i;j++) {
+				if(i%j==0)
+					prime=false;
+			}
+			
+			if(prime) {
 				count++;
+			}
 		}
-		
-		if(count==2) {
-			System.out.println(num+" is a PrimeNumber");
-		}else
-			System.out.println(num+" is not a PrimeNumber");
-		System.out.println(Math.sqrt(num));
+		System.out.println("The number of primes between 1 and "+num+" is "+count);
 	}
 
 }
-
-
